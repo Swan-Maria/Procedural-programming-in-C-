@@ -58,16 +58,7 @@ int main()
 	int mult = MultipleElementsBetweenIndexes(inputArray, start, finish);
 
 	std::cout << "multiple of array between max and min value:" << mult << '\n';
-
-	// Task 3
-	int firstNullIndex = FindIndex(inputArray, SIZE, FindFirstNullIndex);
-	int lastNullIndex = FindIndex(inputArray, SIZE, FindLastNullIndex);
-
-	std::cout << "first null index: " << firstNullIndex << '\n' << "last null index: " << lastNullIndex << '\n';
-
-	int add = AddElementsBetweenIndexes(inputArray, firstNullIndex, lastNullIndex);
-	std::cout << "add of array between first and last value: " << add << '\n';
-
+	
 	return 0;
 }
 //----------------------------------------------------------------
