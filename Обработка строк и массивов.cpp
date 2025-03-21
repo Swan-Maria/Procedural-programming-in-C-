@@ -31,6 +31,7 @@ const int SIZE = 50;
 int main()
 {
 	srand(time(NULL));
+	
 	// Task 1
 	char inputString[150];
 	std::cout << "Enter line...\n";
@@ -39,24 +40,20 @@ int main()
 	RemoveSymbols(inputString);
 	std::cout <<"after: " << inputString << '\n';
 
+	// Task 2
 	int inputArray[SIZE];
 	for (int i = 0; i < SIZE; ++i)
 		inputArray[i] = rand() % 11;
 	PrintArray(inputArray, SIZE);
-	// Task 2
 	int minIndex = FindIndex(inputArray, SIZE, FindMinIndex);
 	int maxIndex = FindIndex(inputArray, SIZE, FindMaxIndex);
-
 	std::cout << "min index: " << minIndex << '\n' << "max index: " << maxIndex << '\n';
-
 	int start, finish;
 	if (minIndex < maxIndex)
 		start = minIndex, finish = maxIndex;
 	else
 		start = maxIndex, finish = minIndex;
-
 	int mult = MultipleElementsBetweenIndexes(inputArray, start, finish);
-
 	std::cout << "multiple of array between max and min value:" << mult << '\n';
 	
 	return 0;
